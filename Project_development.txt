@@ -1,0 +1,24 @@
+Phase 1: Single Dataset
+1a.
+The project is currently in a state where a 10,000 cell run showed pretty solid validation results
+I want to scale up to the entire single cell dataset that I am working with (25000) cells then re validate on TRRUST and STRING
+Once we are confident that the model is working well
+  Covers most of the genome
+  Validates well
+I want to get this into a useable interactive format pretty early on
+ie, Someone can say, type in two genes and the interface will show the most direct path between those two genes
+or someone types in a single gene and it shows the nearby interactome
+or someone types in a a bunch of genes and it shows how the genes connect together
+
+1b.
+Deep topological analysis
+Assessment of "can we infer stream direction - Gene A is upstream of Gene B"
+
+
+Phase 2: Multi Dataset
+Currently the interactome is built on a single cell rna sequencing atlas with 25000 cells
+I want to run this on multiple datasets independently, then cross validate on each other
+If we are truly pulling the global interactome then two datasets should not show too much difference
+Then I want to expand training across multiple datasets, by aligning networks, keeping stable connections and removing unstable
+Finally, work on per cell type graphs. Where we find datasets of one major cell type, and run it against the global graph, defining what the network looks like for that cell type specifically
+Also when the stiffness inference model is trained we might be able to use that to create a mechanically specific graph where certain sub networks are separated by stiffness
